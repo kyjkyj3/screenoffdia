@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kevin.pdialogex" >
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".PopActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name" >
+
+            <!-- android:theme="@android:style/Theme.NoTitleBar.Fullscreen"> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".OneService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".DialogActivity"
+            android:label="@string/title_activity_dialog"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|keyboardHidden|screenSize|keyboard"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.example.kevin.pdialogex.DialogActivity">
+        </activity>
+    </application>
+
+</manifest>

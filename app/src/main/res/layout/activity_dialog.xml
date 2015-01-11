@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="false"
+    android:touchscreenBlocksFocus="false"
+    android:filterTouchesWhenObscured="false"
+    tools:context="com.example.kevin.pdialogex.DialogActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ff000000">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="250dp"
+            android:layout_height="115dp"
+            android:layout_gravity="center"
+            android:background="#92561655"
+            android:id="@+id/cl"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iv_icon" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Title"
+                            android:id="@+id/tv_title"
+                            android:textColor="#ffffffff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Message"
+                            android:id="@+id/tv_mag"
+                            android:paddingTop="3dp"
+                            android:textColor="#ffffffff" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:touchscreenBlocksFocus="false">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="닫기"
+                        android:id="@+id/btn_close"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:textColor="#ffffffff" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:text="보기"
+                        android:id="@+id/btn_gogo"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:textColor="#ffffffff" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
